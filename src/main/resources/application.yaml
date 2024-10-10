@@ -2,6 +2,6 @@ spring:
   ai:
     ollama:
       base-url: http://localhost:11434
-      chat:
-        # Ollama supports many models
-        model: gemma:2b
+      model: llama3
+      # Ollama supports many models
+      # model: gemma:2b
