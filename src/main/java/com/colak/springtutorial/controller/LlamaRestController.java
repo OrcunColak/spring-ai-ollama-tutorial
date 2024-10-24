@@ -18,6 +18,7 @@ public class LlamaRestController {
     private final LlamaAiService llamaAiService;
 
 
+    // http://localhost:8080/api/v1/ai/generate
     @GetMapping("api/v1/ai/generate")
     public ResponseEntity<LlamaResponse> generate(
             @RequestParam(value = "promptMessage", defaultValue = "Why is the sky blue?")

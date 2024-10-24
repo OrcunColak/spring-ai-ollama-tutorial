@@ -1,11 +1,15 @@
 # Read Me
 
 The original idea is from  
-https://medium.com/@freeyecheng/spring-ai-java-integration-with-large-language-models-simplified-04873df6a538?source=explore---------7-109--------------------1912cfd7_9f56_41f5_89a5_cbdbad066ace-------15
+https://howtodoinjava.com/spring-ai/spring-ai-ollama-example/
 
-also see
-https://blog.devops.dev/building-generative-ai-with-spring-boot-ai-and-integrating-ollama-llama3-af21e0cd756d
 Run
-ollama run gemma:2b
-or
-ollama run llama3
+
+```
+docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama
+docker exec -it ollama ollama run llama3
+```
+
+```
+curl http://localhost:11434/api/generate -d "{\"model\":\"llama3\",\"prompt\":\"Why is the sky blue?\"}" -H "Content-Type: application/json"
+```

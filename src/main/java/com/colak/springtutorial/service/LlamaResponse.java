@@ -1,9 +1,10 @@
 package com.colak.springtutorial.service;
 
-import lombok.RequiredArgsConstructor;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
 
-@RequiredArgsConstructor
+@Getter
+@AllArgsConstructor
 public class LlamaResponse {
-
-    private final String message;
+    private String message;
 }
