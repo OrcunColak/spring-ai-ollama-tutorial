@@ -3,6 +3,12 @@
 The original idea is from  
 https://howtodoinjava.com/spring-ai/spring-ai-ollama-example/
 
+Ollama brings large language models to your local machine. Key features include:
+
+Running AI models locally for privacy and speed
+Support for multiple open-source models
+Easy setup and management through a CLI
+
 Run
 
 ```
