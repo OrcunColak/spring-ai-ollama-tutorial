@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class LlamaAiService {
 
-    private final OllamaChatClient chatClient;
+    private final OllamaChatClient ollamaChatClient;
 
     public LlamaResponse generateMessage(String promptMessage) {
-        chatClient.generate(promptMessage);
-        return new LlamaResponse("ok");
+        String response = ollamaChatClient.generate(promptMessage);
+        return new LlamaResponse(response);
     }
 
     public LlamaResponse generateJoke(String topic) {
         String promptMessage = String.format("Tell me a joke about %s", topic);
-        chatClient.generate(promptMessage);
-        return new LlamaResponse("ok");
+        String response = ollamaChatClient.generate(promptMessage);
+        return new LlamaResponse(response);
     }
 }
